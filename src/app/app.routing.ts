@@ -7,7 +7,6 @@ export const routes: Routes = [
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
   { path: 'pages', loadChildren: './pages/pages.module#PagesModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginModule' },
-  { path: 'register', loadChildren: './pages/register/register.module#RegisterModule' },
   { path: '**', component: ErrorComponent }
 ];
 

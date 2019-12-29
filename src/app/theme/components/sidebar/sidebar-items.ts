@@ -2,8 +2,6 @@ import { SidebarItem } from './sidebar-item.model';
 
 export const sidebarItems = [ 
     new SidebarItem (1, 'Dashboard', 'pages/dashboard', null, 'fa-home', null, false, 0),
-    new SidebarItem (2, 'Charts', null, null, 'fa-bar-chart', null, true, 0),
-    new SidebarItem (3, 'Ng2-Charts', 'pages/charts/ng2charts', null, 'fa-caret-right', null, false, 2),
     new SidebarItem (4, 'UI Features', null, null, 'fa-laptop', null, true, 0), 
     new SidebarItem (5, 'Buttons', 'pages/ui/buttons', null, 'fa-caret-right', null, false, 4),
     new SidebarItem (6, 'Cards', 'pages/ui/cards', null, 'fa-caret-right', null, false, 4), 
@@ -19,7 +17,6 @@ export const sidebarItems = [
     new SidebarItem (16, 'Resizable', 'pages/tools/resizable', null, 'fa-caret-right', null, false, 14), 
     new SidebarItem (17, 'Toaster', 'pages/tools/toaster', null, 'fa-caret-right', null, false, 14),    
     new SidebarItem (18, 'Mail', 'pages/mail/mail-list/inbox', null, 'fa-envelope-o', null, false, 0), 
-    new SidebarItem (19, 'Calendar', 'pages/calendar', null, 'fa-calendar', null, false, 0), 
     new SidebarItem (20, 'Form Elements', null, null, 'fa-pencil-square-o', null, true, 0), 
     new SidebarItem (21, 'Form Inputs', 'pages/form-elements/inputs', null, 'fa-caret-right', null, false, 20),
     new SidebarItem (22, 'Form Layouts', 'pages/form-elements/layouts', null, 'fa-caret-right', null, false, 20),
@@ -37,7 +34,6 @@ export const sidebarItems = [
     new SidebarItem (34, 'Leaflet Maps', 'pages/maps/leafletmaps', null, 'fa-caret-right', null, false, 31),
     new SidebarItem (35, 'Pages', null, null, 'fa-file-o', null, true, 0), 
     new SidebarItem (36, 'Login', '/login', null, 'fa-caret-right', null, false, 35),
-    new SidebarItem (37, 'Register', '/register', null, 'fa-caret-right', null, false, 35),
     new SidebarItem (38, 'Blank Page', 'pages/blank', null, 'fa-caret-right', null, false, 35),
     new SidebarItem (39, 'Error Page', '/pagenotfound', null, 'fa-caret-right', null, false, 35),    
     new SidebarItem (140, 'Menu Level 1', null, null, 'fa-folder-open-o', null, true, 0),
