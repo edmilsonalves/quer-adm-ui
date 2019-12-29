@@ -13,6 +13,7 @@ export const routes: Routes = [
             { path:'', redirectTo:'dashboard', pathMatch:'full' },
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule', data: { breadcrumb: 'Dashboard' }  },
             { path: 'gerenciar-produtos', loadChildren: './gerenciar-produtos/gerenciar-produtos.module#GerenciarProdutosModule', data: { breadcrumb: 'Gerenciar produtos' }  },
+            { path: 'app-quer', loadChildren: './app-quer/app-quer.module#AppQuerModule', data: { breadcrumb: 'App querr' }  },
             { path: 'search', component: SearchComponent, data: { breadcrumb: 'Search' } },
             { path: 'blank', component: BlankComponent, data: { breadcrumb: 'Blank page' } }
         ]

@@ -11,6 +11,7 @@
     display: block;
     z-index: 9;
     margin-top: 60px;
+    box-shadow: 2px 0px 17px 0px rgba(0,0,0,0.13);//incluido por edmilson
     &.menu-collapsed{
         width: 50px;
         a.sidebar-list-link b{
@@ -88,7 +89,7 @@ a.sidebar-list-link {
         transition: transform 0.2s linear;
     }
     &:hover{
-         background-color: $main-color;
+         background-color: $quer-sidebar-link-hover-color;
     }
 }
 
@@ -99,6 +100,10 @@ a.sidebar-list-link {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+.sidebar-sublist-item{
+    background:$quer-sidebar-item-expand-color;
 }
 
 .sidebar-sublist{
@@ -132,8 +137,9 @@ a.sidebar-list-link {
                 font-size: 10px;
             } 
             &:hover{
-                background-color: $main-color; 
+                background-color: $quer-sidebar-item-hover-color; 
             }
+            
         }
     }
     .subitem-submenu-list li {
@@ -173,6 +179,7 @@ a.sidebar-list-link {
 
 .active-link{
     background-color: $sidebar-item-active-bg-color;
+    color: $quer-sidebar-item-active-label-color !important;
 }
 
 
