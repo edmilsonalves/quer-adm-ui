@@ -1,0 +1,30 @@
+<div>
+  <label for="file-input">
+    <a style="cursor: pointer;"><img src="../assets/img/img-button/upload.jpg" width="50" height="50"
+        ngbTooltip="Clique para adicionar uma nova imagens" container="body" placement="top"></a>
+  </label>
+  <sv-loading *ngIf="carregando"></sv-loading>
+
+  <input id="file-input" type="file" style="display: none" multiple (change)="onChange($event)"/>
+</div>
+
+<div class="card images-container" cdkDropListGroup>
+  <div cdkDropList [cdkDropListEnterPredicate]="dropListEnterPredicate" (cdkDropListDropped)="dropListDropped($event)">
+  </div>
+  <div cdkDropList *ngFor="let imagem of listImagem; let idx = index; trackBy: setarOrder" [cdkDropListEnterPredicate]="dropListEnterPredicate"
+    (cdkDropListDropped)="dropListDropped($event)" class="m-image-wrapper">
+
+    <div cdkDrag  (cdkDragMoved)="dragMoved($event);">
+        
+      <img  src="{{imagem?.file}}" width="145" height="145">
+      <a class="m-delete-img" data-toggle="tooltip" data-animation="false"
+      data-placement="top" ngbTooltip="Excluir imagem" container="body" placement="top">
+          <i class="text-danger fa fa-trash" (click)="remove(idx, imagem)"></i>
+      </a>
+
+      <i class="ordem" ngbTooltip="Ordem que essa imagem será apresentada" container="body" placement="top">{{imagem?.ordem}}</i>
+     
+
+    </div>
+  </div>
+</div>

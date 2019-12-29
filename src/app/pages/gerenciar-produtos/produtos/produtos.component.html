@@ -1,0 +1,148 @@
+<div class="row" [@simpleFadeAnimation]="'in'" *ngIf="!carregando">
+  <div class="col-sm-6">
+    <span class="text-uppercase pull-left here"></span>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item text-uppercase">
+        <a [routerLink]="['/pages/gerenciar-produtos/produtos']">Gerenciar produtos</a>
+        <span hidden="">
+          <b>Gerenciar produtos</b>
+        </span>
+      </li>
+      <li class="breadcrumb-item text-uppercase">
+        <a ng-reflect-router-link="/pages/gerenciar-produtos/prod" hidden=""></a>
+        <span>
+          <b>Lista de produtos</b>
+        </span>
+      </li>
+    </ol>
+  </div>
+  <div class="col-sm-6 text-right">
+    <div class="inbox-container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="b-btn mr-1" (click)="onSubmit(form.value)" data-toggle="tooltip" data-placement="top"
+            data-animation="false" title="Incluir novo produto">
+            <button type="button" class="btn btn-success btn-sm" [routerLink]="['../produtos/add/']">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row bottom-30">
+  <div class="col">
+    <div widget class="card">
+      <div class="card-header">
+        <span>Lista de produtos</span>
+        <div class="widget-controls">
+          <a data-widgster="expand" href="#" class="transition">
+            <i class="fa fa-chevron-down"></i>
+          </a>
+          <a data-widgster="collapse" href="#" class="transition">
+            <i class="fa fa-chevron-up"></i>
+          </a>
+          <a data-widgster="fullscreen" href="#" class="transition">
+            <i class="fa fa-expand"></i>
+          </a>
+          <a data-widgster="restore" href="#" class="transition">
+            <i class="fa fa-compress"></i>
+          </a>
+          <a data-widgster="close" href="#" class="transition">
+            <i class="fa fa-times"></i>
+          </a>
+        </div>
+      </div>
+      <div class="card-body widget-body">
+        <div class="input-group mb-3">
+          <input type="text" #search class="form-control col-sm-4" placeholder="Pesquisar..."
+            (keydown.enter)="findByFilter()">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-info" (click)="findByFilter()">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <div class="input-group-append">
+            <button type="button" class="btn btn-secondary" data-placement="top" data-toggle="popover"
+              data-trigger="hover" title="Busca avançada"
+              data-content="Clique e faça uma pesquisa com filtros avançados">
+              <i class="fa fa-filter"></i>
+            </button>
+          </div>
+          <div *ngIf="carregando" class="input-group-append" style="margin-left:3px; margin-top:8px;">
+            <sv-loading></sv-loading>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th class="text-center">Preço</th>
+                <th class="text-center">Estoque atual</th>
+                <th class="text-center">Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of list">
+                <td [routerLink]="['../produtos/edit/', item.id]" class="cursor" style=" min-width: 300px;">
+                  <div class="imagem">
+                    <img src="{{item.imagemDestaque}}" alt="Card image" width="50" height="50">
+                  </div>
+                  <div class="areaTexto">
+                    <span class="negrito">{{item.nome}}</span>
+                    <br>
+                    <small>
+                      SKU: {{item.codigo}}
+                    </small>
+                    <br>
+                    <small *ngIf="item.possuiVariacao && item.qtdeVariacao > 1">
+                      {{item.qtdeVariacao}} Variações
+                    </small>
+                    <small *ngIf="item.possuiVariacao && item.qtdeVariacao == 1">
+                      {{item.qtdeVariacao}} Variação
+                    </small>
+                  </div>
+                </td>
+                <td [routerLink]="['../produtos/edit/', item.id]" class="cursor text-center">
+                  <del class="text-muted">de R$ {{item.precoVenda}},00</del><br />
+                  por R$ {{item.precoPromocional}},00
+                </td>
+                <td [routerLink]="['../produtos/edit/', item.id]" class="cursor text-center">
+                  {{item.estoqueAtual}}
+                </td>
+                <td [routerLink]="['../produtos/edit/', item.id]" class="cursor text-center">
+                  <span class="font-size-12 badge badge-success"
+                    *ngIf="item.status == 0">{{item.statusDescricao}}</span>
+                  <span class="font-size-12 badge badge-secondary"
+                    *ngIf="item.status == 1">{{item.statusDescricao}}</span>
+                  <span class="font-size-12 badge badge-danger"
+                    *ngIf="item.status != 0 && item.status != 1">{{item.statusDescricao}}</span>
+                </td>
+                <td class="tdAcoes">
+                  <a [routerLink]="['../produtos']" class="fa fa-search btn btn-sm btn-primary mr-1"
+                    ngbTooltip="Visualizar produto" container="body">
+                  </a>
+                  <a [routerLink]="['../produtos/edit/', item.id]" class="fa fa-edit btn btn-sm btn-info mr-1"
+                    ngbTooltip="Editar produto" container="body">
+                  </a>
+                  <a [routerLink]="['../produtos']" class="fa fa-clone btn btn-sm btn-info mr-1"
+                    ngbTooltip="Clonar produto" container="body">
+                  </a>
+                  <a (click)="delete(item)" class="fa fa-remove btn btn-sm btn-danger cursor"
+                    ngbTooltip="Mover para lixeira" container="body" placement="left">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

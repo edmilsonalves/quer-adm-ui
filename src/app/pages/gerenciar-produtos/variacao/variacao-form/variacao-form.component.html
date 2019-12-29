@@ -1,0 +1,98 @@
+<div class="card-group">
+  <div class="alert alert-info" role="alert">
+    Escolha abaixo quais são os tipos de variação que seu produto pode ter. por exemplo, se este produto é uma camiseta que varia
+    tamanho e cor, selecione abaixo "Cor" e "Tamanho". Depois preencha os dados em "Variaçao do produto" e clique em "Salvar
+    variação".
+  </div>
+  <div class="card-body" [formGroup]="form">
+    <div class="row">
+      <div class="col">
+        <div class="card-group">
+          <div class="card col-xl-3 col-lg-3 col-md-3 col-sm-3" style="min-width: 190px">
+            <div class="card-body">
+              <h5 class="card-title">Tipo de variaçõessss</h5>
+
+              <div formArrayName="listAtributo">
+                <div *ngFor="let item of listAtributo.controls; let idx = index" class="abc-checkbox abc-checkbox-success" [formGroupName]="idx">
+                  <input id="id_{{idx}}" type="checkbox" formControlName="selecionado" (change)="checkTipoAtributo(item.value, idx, $event)">
+                  <label for="id_{{idx}}">{{item.value.descricao}}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card col-xl-9 col-lg-9 col-md-9 col-sm-9">
+            <div class="card-body" style="min-width: 190px">
+              <h5 class="card-title">Variaçao do produto</h5>
+
+              <div class="form-group col-sm-12">
+                <label id="codigo" class="form-control-label m-t-5">Código
+                  <small>(SKU)</small>
+                </label>
+                <input type="text" class="form-control checking-field size-390" id="codigo" formControlName="codigo">
+              </div>
+<!-- 
+              <div class="form-group col-sm-12">
+                <h6>Essa variação é a principal do produto?</h6>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" [value]="true" formControlName="principal" name="principal" class="custom-control-input radio-success"
+                    id="principalSim" checked>
+                  <label class="custom-control-label" for="principalSim">Sim</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" [value]="false" formControlName="principal" name="principal" class="custom-control-input radio-danger" id="principalNao">
+                  <label class="custom-control-label" for="principalNao">Não</label>
+                </div>
+              </div> -->
+
+              <div formArrayName="listAtributo">
+                <div class="form-group col-sm-12" *ngFor="let tipoAtributo of listAtributo.controls; let i = index" [formGroupName]="i">
+                  <label for="tipoAtributo_{{tipoAtributo.value.id}}" *ngIf="tipoAtributo.value.selecionado">{{tipoAtributo.value.descricao}}</label>
+                  <select formControlName="idAtributoSelecionado" name="idAtributoSelecionado" id="categoria" class="form-control size-390"
+                    *ngIf="tipoAtributo.value.selecionado">
+                    <option *ngFor="let item of tipoAtributo.value.atributos" [ngValue]="item.id">
+                      {{item.descricao }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group col-sm-12">
+                <label id="precoCusto" class="form-control-label m-t-5">Preço de custo</label>
+                <input type='number' id="precoCusto" formControlName="precoCusto" step='0.01' min="0.01" max="70.00" placeholder='0.00' class="form-control minMax-132"
+                />
+              </div>
+              <div class="form-group col-sm-12">
+                <label id="precoVenda" class="form-control-label m-t-5">Preço de venda</label>
+                <input type='number' id="precoVenda" formControlName="precoVenda" step='0.01' min="0.01" max="70.00" placeholder='0.00' class="form-control minMax-132"
+                />
+              </div>
+              <div class="form-group col-sm-12">
+                <label id="precoPromocional" class="form-control-label m-t-5">Preço promocional</label>
+                <input type='number' id="precoPromocional" formControlName="precoPromocional" step='0.01' min="0.01" max="70.00" placeholder='0.00'
+                  class="form-control minMax-132" />
+              </div>
+
+              <div class="col-lg-12 col-12 bottom-15">
+                <sv-imagem [imagens]="form.value.imagens"></sv-imagem>
+                <br />
+              </div>
+
+              <hr />
+
+              <div class="form-actions center  m-left-16">
+                <button type="button" (click)="onSubmit(form.value)" class="btn btn-raised btn-primary  mr-1">
+                  <i class="fa fa-check-square-o"></i> Salvar
+                </button>
+                <button (click)="cancelar()" type="button" class="btn btn-raised btn-secondary">
+                  <i class="ft-x"></i> Cancelar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

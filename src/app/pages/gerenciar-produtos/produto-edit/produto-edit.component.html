@@ -1,0 +1,311 @@
+<form (ngSubmit)="onSubmit(form)" [formGroup]="form" [@simpleFadeAnimation]="'in'">
+
+  <div class="row" [@simpleFadeAnimation]="'in'" *ngIf="!carregando">
+    <div class="col-sm-6">
+      <span class="text-uppercase pull-left here"></span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item text-uppercase">
+          <a [routerLink]="['/pages/gerenciar-produtos/produtos']">Gerenciar produtos</a>
+          <span hidden="">
+            <b>Gerenciar produtos</b>
+          </span>
+        </li>
+        <li class="breadcrumb-item text-uppercase">
+          <a ng-reflect-router-link="/pages/gerenciar-produtos/prod" hidden=""></a>
+          <span>
+            <b>Novo produto</b>
+          </span>
+        </li>
+      </ol>
+    </div>
+    <div class="col-sm-6 text-right">
+      <div class="inbox-container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="b-btn mr-1" [style.display]="(id || !type) ? 'inline-block' : 'none'" data-toggle="tooltip"
+              data-placement="top" data-animation="false" title="Voltar">
+              <button (click)="cancelar()" type="button" class="btn btn-secondary btn-sm">
+                <i class="fa fa-arrow-left"></i>
+              </button>
+            </div>
+            <div class="b-btn mr-1" (click)="onSubmit(form.value)" data-toggle="tooltip" data-placement="top"
+              data-animation="false" title="Salvar">
+              <button type="button" class="btn btn-primary btn-sm">
+                <i class="fa fa-save"></i>
+              </button>
+            </div>
+            <div class="b-btn mr-1" *ngIf="id" data-toggle="tooltip" data-placement="top" data-animation="false"
+              title="Delete">
+              <button (click)="trash()" type="button" class="btn btn-danger btn-sm">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+
+            <div class="b-btn mr-1"
+              [style.display]="(router.url == '/pages/mail/mail-compose' || id) ? 'none' : 'inline-block'"
+              data-toggle="tooltip" data-placement="top" data-animation="false" title="Refresh">
+              <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-refresh"></span></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row bottom-30" [@simpleFadeAnimation]="'in'" *ngIf="!carregando">
+    <div class="col">
+      <div widget class="card">
+        <div class="card-header">
+          <span>Editando produto "{{form.value.nome}}"</span>
+          <div class="widget-controls">
+            <a data-widgster="expand" href="#" class="transition"><i class="fa fa-chevron-down"></i></a>
+            <a data-widgster="collapse" href="#" class="transition"><i class="fa fa-chevron-up"></i></a>
+            <a data-widgster="fullscreen" href="#" class="transition"><i class="fa fa-expand"></i></a>
+            <a data-widgster="restore" href="#" class="transition"><i class="fa fa-compress"></i></a>
+            <a data-widgster="close" href="#" class="transition"><i class="fa fa-times"></i></a>
+          </div>
+        </div>
+        <div class="card-body widget-body">
+          <div class="row mbm-20">
+            <div class="col-lg-12 col-12 bottom-30">
+              <div class="clearfix">
+                <ul class="nav nav-tabs top pull-left w-100p">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tabInfoPrincipal">Informações principais</a>
+                  </li>
+                  <li class="nav-item" *ngIf="form.get('possuiVariacao').value">
+                    <a class="nav-link" data-toggle="tab" href="#tabVariacao"
+                      (click)="changeTab('tabVariacao')">Variacão</a>
+                  </li>
+                  <li class="nav-item" *ngIf="!form.get('possuiVariacao').value">
+                    <a class="nav-link" data-toggle="tab" href="#tabImagem" (click)="changeTab('tabImagem')">Imagens</a>
+                  </li>
+                  <li class="nav-item" *ngIf="form.get('movimentaEstoque').value && !form.get('possuiVariacao').value">
+                    <a class="nav-link" data-toggle="tab" href="#tabEstoque"
+                      (click)="changeTab('tabEstoque')">Estoque</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tabPesoDimencao"
+                      (click)="changeTab('tabPesoDimencao')">Pesos e dimensões</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                      aria-haspopup="true" aria-expanded="false">Mais</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#tabExportar" data-toggle="tab">Exportar produto</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content top">
+                <div class="tab-pane active" id="tabInfoPrincipal">
+                  <div class="form-group col-sm-12">
+                    <h6>Esse produto possui variações?</h6>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" [value]="true" formControlName="possuiVariacao" name="possuiVariacao"
+                        class="custom-control-input radio-success" id="possuiVariacaoSim" checked>
+                      <label class="custom-control-label" for="possuiVariacaoSim">Sim</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" [value]="false" formControlName="possuiVariacao" name="possuiVariacao"
+                        class="custom-control-input radio-danger" id="possuiVariacaoNao">
+                      <label class="custom-control-label" for="possuiVariacaoNao">Não</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-sm-12" *ngIf="!form.get('possuiVariacao').value">
+                    <h6>Gerenciar o estoque deste produto?</h6>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" [value]="true" formControlName="movimentaEstoque" name="movimentaEstoque"
+                        class="custom-control-input radio-success" id="movimentaEstoqueSim">
+                      <label class="custom-control-label" for="movimentaEstoqueSim">Sim</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" [value]="false" formControlName="movimentaEstoque" name="movimentaEstoque"
+                        class="custom-control-input radio-danger" id="movimentaEstoqueNao">
+                      <label class="custom-control-label" for="movimentaEstoqueNao">Não</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-12 col-sm-12">
+                    <label id="codigo" class="form-control-label m-t-5">Código
+                      <small>(SKU)</small>
+                    </label>
+                    <input type="text" class="form-control checking-field size-390" id="codigo" formControlName="codigo"
+                      required>
+                    <span class="help-block text-danger" *ngIf="isInvalid('codigo')">Campo obrigatório
+                    </span>
+                  </div>
+
+                  <div class="form-group col-sm-12">
+                    <label id="nome" class="form-control-label">Nome</label>
+                    <input type="text" class="form-control size-390" id="nome" formControlName="nome" required>
+                    <span class="help-block text-danger" *ngIf="isInvalid('nome')">Campo obrigatório
+                    </span>
+                  </div>
+
+                  <div class="form-group col-sm-12" [class.has-danger]="isInvalid('idCategoria')"
+                    [class.has-success]="isValid('idCategoria')">
+                    <label for="categoria">Categoria</label>
+                    <select formControlName="idCategoria" name="idCategoria" id="categoria"
+                      class="form-control size-390" [class.form-control-danger]="isInvalid('idCategoria')"
+                      [class.form-control-success]="isValid('idCategoria')">
+                      <option *ngFor="let item of categorias" [ngValue]="item.id">
+                        {{item.descricao }}
+                      </option>
+                    </select>
+                    <span class="help-block text-danger" *ngIf="isInvalid('idCategoria')">Campo obrigatório</span>
+                  </div>
+
+                  <div class="form-group col-sm-12" [class.has-danger]="isInvalid('idUnidadeMedida')"
+                    [class.has-success]="isValid('idUnidadeMedida')">
+                    <label for="unidadeMedida">Unidade medida</label>
+                    <select formControlName="idUnidadeMedida" name="idUnidadeMedida" id="unidadeMedida"
+                      class="form-control size-390" [class.form-control-danger]="isInvalid('idUnidadeMedida')"
+                      [class.form-control-success]="isValid('idUnidadeMedida')">
+                      <option *ngFor="let item of unidadeMedidas" [ngValue]="item.id">
+                        {{item.descricao }}
+                      </option>
+                    </select>
+                    <span class="help-block text-danger" *ngIf="isInvalid('idUnidadeMedida')">Campo obrigatório</span>
+                  </div>
+
+                  <div class="form-group col-sm-12">
+                    <h6>Esse produto está ativo?</h6>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" [value]="true" formControlName="ativo" name="ativo"
+                        class="custom-control-input radio-success" id="ativoSim" checked>
+                      <label class="custom-control-label" for="ativoSim">Sim</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" [value]="false" formControlName="ativo" name="ativo"
+                        class="custom-control-input radio-danger" id="ativoNao">
+                      <label class="custom-control-label" for="ativoNao">Não</label>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12" *ngIf="form.controls.camposExtra?.controls.length > 0">
+                    <br />
+                    <h6 class="tituloProduto">INFORMAÇÕES EXTRAS</h6>
+                    <hr />
+                  </div>
+
+                  <div formArrayName="camposExtra"
+                    *ngFor="let campo of form.controls.camposExtra?.controls; let i = index"
+                    class="form-group col-sm-8">
+                    <div [formGroupName]="i">
+                      <label class="form-control-label"
+                        for="campo_{{campo.value.id}} espacoMenor">{{campo.value.label}}</label>
+                      <!-- <a class="delete-imagem">
+                              <i class="text-danger ft-trash-2" (click)="removeCampoExtra(i, campo)" ngbTooltip="Excluir campo"></i>
+                            </a> -->
+                      <div class="input-group mb-3">
+                        <input id="campo_{{campo.value.id}}" type="text" value="{{campo.value.value}}"
+                          class="form-control size-390" formControlName="value" />
+                        <span class="delete-imagem ">
+                          <a class="delete-imagem">
+                            <i class="fa fa-trash" (click)="removeCampoExtra(i, campo)" ngbTooltip="Excluir campo"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <sv-campo-extra (add)="getCampoExtra($event)"></sv-campo-extra>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tabVariacao">
+                  <sv-variacao [listVariacao]="form.get('listVariacao').value"
+                    (ocultarBtSalvar)="ocultarBtSalvar($event)" (houveAlteracao)="houveAlteracaoVariacao($event)"
+                    *ngIf="tabAtual == 'tabVariacao' && form.get('listVariacao').value"></sv-variacao>
+                </div>
+                <div class="tab-pane" id="tabImagem">
+                  <sv-imagem [listImagem]="form.get('listImagem').value" *ngIf="tabAtual == 'tabImagem'"></sv-imagem>
+                </div>
+                <div class="tab-pane" id="tabPesoDimencao">
+                  <div class="form-group col-sm-12">
+                    <label id="peso" class="form-control-label">Peso
+                      <small>(kg)</small>
+                    </label>
+                    <input type="number" class="form-control size-150" id="peso" formControlName="peso">
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <label id="largura" class="form-control-label">Largura
+                      <small>(m)</small>
+                    </label>
+                    <input type="number" class="form-control size-150" id="largura" formControlName="largura">
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <label id="altura" class="form-control-label">Altura
+                      <small>(m)</small>
+                    </label>
+                    <input type="number" class="form-control size-150" id="altura" formControlName="altura">
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <label id="comprimento" class="form-control-label">Comprimento
+                      <small>(m)</small>
+                    </label>
+                    <input type="number" class="form-control size-150" id="comprimento" formControlName="comprimento">
+                  </div>
+                </div>
+                <div class="tab-pane" id="tabEstoque">
+                  <div class="form-group col-sm-12">
+                    <label class="form-control-label">Estoque atual</label>
+                    <input type="number" class="form-control size-150" id="estoqueAtual" formControlName="estoqueAtual">
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <label class="form-control-label">Estoque mínimo</label>
+                    <input type="number" class="form-control size-150" id="estoqueMinimo"
+                      formControlName="estoqueMinimo">
+                  </div>
+                </div>
+                <div class="tab-pane" id="tabExportar">
+                  <p>Aliquam pulvinar lacinia euismod. Sed ante nisi, volutpat a ex vel, dapibus lacinia lacus. Nam
+                    pellentesque, ligula nec aliquet fermentum, lectus justo luctus mi.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <br />
+            <hr />
+            <!-- <div class="form-actions center col-sm-12 btFloat"> -->
+            <div class="inbox-container">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 text-right">
+                  <div class="b-btn mr-1" [style.display]="(id || !type) ? 'inline-block' : 'none'"
+                    data-toggle="tooltip" data-placement="top" data-animation="false" title="Voltar">
+                    <button (click)="cancelar()" type="button" class="btn btn-secondary btn-sm">
+                      <i class="fa fa-arrow-left"></i>
+                    </button>
+                  </div>
+                  <div class="b-btn mr-1" (click)="onSubmit(form.value)" data-toggle="tooltip" data-placement="top"
+                    data-animation="false" title="Salvar">
+                    <button type="button" class="btn btn-primary btn-sm">
+                      <i class="fa fa-save"></i>
+                    </button>
+                  </div>
+                  <div class="b-btn mr-1" *ngIf="id" data-toggle="tooltip" data-placement="top" data-animation="false"
+                    title="Delete">
+                    <button (click)="trash()" type="button" class="btn btn-danger btn-sm">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+
+                  <div class="b-btn mr-1"
+                    [style.display]="(router.url == '/pages/mail/mail-compose' || id) ? 'none' : 'inline-block'"
+                    data-toggle="tooltip" data-placement="top" data-animation="false" title="Refresh">
+                    <button type="button" class="btn btn-secondary btn-sm"><span class="fa fa-refresh"></span></button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

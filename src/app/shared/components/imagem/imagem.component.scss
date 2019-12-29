@@ -1,0 +1,60 @@
+  .m-img-upload-btn{
+    position: absolute;
+    padding: 0;
+    width: calc(100% - 30px);
+    height: 38px;
+    opacity: 0;
+  }
+  .images-container{
+    width: 100%;
+    top: 2px;
+    border: 2px dashed #ccc;
+    background: rgb(241, 241, 241);
+    min-height: 293px;
+    padding: 10px;
+    display: block;
+    .m-image-wrapper{
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+        width: 120px;
+        height: 120px;
+        .m-delete-img{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            border: 2px solid red;
+            color: red;
+            padding: 6px 8px;
+            border-radius: 50%;
+            visibility: hidden;
+            cursor: pointer;
+        }
+        .ordem {
+          position: absolute;
+          top: 0px;
+          left: 6px;
+          color: rgb(0, 0, 0);
+          font-size: 25pt;
+          font-weight: bold;
+        }
+        &:hover .ordem{
+          top: 0px;
+          left: 6px;
+          color: green;
+          font-size: 35pt;
+          font-weight: bold;
+        }
+        
+        &:hover .m-delete-img{
+          visibility: visible;
+        }
+
+        img{
+           width: 120px;
+           height: 120px;          
+        }
+    }   
+  }
+  
+  
