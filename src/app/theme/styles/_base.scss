@@ -79,7 +79,7 @@ form .form-section i {
 }
 
 .tituloProduto {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: #555555;
 }
@@ -101,7 +101,7 @@ form .form-section i {
 /*edmilson*/
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
 
@@ -302,3 +302,17 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 @media (min-width: 1200px) {
     
 }
+
+// inicio css personalizado do appquer
+
+.body-box{
+    display: flex; /* ou inline-flex */
+    flex-direction: row;  
+    background: #FFFFFF;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;    
+}
+
+
+// fim css personalizado do appquer
