@@ -41,41 +41,14 @@ export class MessagesService {
         }
     ];
 
+
+    
     private _notifications = [
         {
-            name: 'michael',
-            text: 'Michael posted a new article.',
-            time: '1 min ago'
-        },
-        {
-            name: 'adam',
-            text: 'Adam changed his contact information.',
-            time: '2 hrs ago'
-        },
-        {
-            image: '../assets/img/shopping-cart.svg',
-            text: 'New orders received.',
-            time: '5 hrs ago'
-        },
-        {
-            name: 'ashley',
-            text: 'Ashley replied to your comment.',
-            time: '1 day ago'
-        },
-        {
-            name: 'tereza',
-            text: 'Today is Tereza\'s birthday.',
-            time: '2 days ago'
-        },
-        {
-            image: '../assets/img/comments.svg',
-            text: 'New comments on your post.',
-            time: '3 days ago'
-        },
-        {
-            name: 'bruno',
-            text: 'Bruno invited you to join the event.',
-            time: '1 week ago'
+            name: 'Perfil de saúde alterado',
+            text: 'Algumas pessoas estão com seus dados de saúde alterados e precisam de orientações.',
+            time: '1 min ago',
+            image: '../assets/img/saude.jpg',
         }
     ];
 
