@@ -1,0 +1,39 @@
+.titulo{
+    padding: 0;
+    background: transparent;
+    color: #313131;
+    font-size: 25px;
+}
+
+.subtitulo{
+    padding: 0;
+    background: transparent;
+    color: #A4A4A4;
+    font-size: 11px;
+    margin-bottom: 30px;
+}
+
+.menu{
+    display: flex; /* ou inline-flex */
+    flex-direction: row;  
+    font-size: 11px;
+ }
+
+ .item {
+    font-size: 1em;
+    color: #313131;
+    padding: 2px 20px 5px 20px;
+    text-align: center;
+}
+
+.item-active {
+    border-bottom: 3px solid;
+    color: #3EB5AD;
+}
+
+.linha {
+    top: -1.9px !important;
+    position: relative;
+    border: 1px solid #B3C7D6;
+    z-index: -1;
+}

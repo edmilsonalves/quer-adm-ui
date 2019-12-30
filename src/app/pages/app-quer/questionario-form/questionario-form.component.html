@@ -1,0 +1,20 @@
+<div class="titulo">
+    Cadastro de questionário
+</div>
+<div class="subtitulo">
+    Cadastro / Questionário
+</div>
+
+<div class="menu">
+    <a class="item" [routerLink]="['./']" routerLinkActive="item-active">QUESTIONÁRIO</a>
+    <a class="item" [routerLink]="['pergunta']" routerLinkActive="item-active">PERGUNTAS</a>
+    <a class="item" [routerLink]="['pontuacao']" routerLinkActive="item-active">PONTUAÇÃO</a>
+    <a class="item" [routerLink]="['aprovacao']" routerLinkActive="item-active">APROVAÇÃO</a>
+    <a class="item" [routerLink]="['publicacao']" routerLinkActive="item-active">PUBLICAÇÃO ADM</a>
+    <a class="item" [routerLink]="['coleta']" routerLinkActive="item-active">COLETA DE DADOS APP</a>
+</div>
+<div class="linha"></div>
+
+<div class="body-box">
+    <router-outlet></router-outlet>
+</div>
