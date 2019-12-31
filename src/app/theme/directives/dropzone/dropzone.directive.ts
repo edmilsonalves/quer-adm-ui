@@ -13,9 +13,11 @@ export class DropzoneUpload {
 
   ngOnInit(): void {
     let dropzone = new Dropzone(this.$el[0], {
+      dictDefaultMessage: "Selecione ou arraste pra aqui",
       addRemoveLinks: true
     });
     Dropzone.autoDiscover = false;
+
    // Dropzone.options.myAwesomeDropzone = false;
   }
 

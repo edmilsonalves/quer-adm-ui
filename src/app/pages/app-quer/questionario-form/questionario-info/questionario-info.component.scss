@@ -2,5 +2,39 @@
     padding: 0px 20px 0 0px;
     min-width: 100px;
     max-width: 380px;
-    min-width: 180px;
+}
+
+.mobile{
+    font-size: 18px;
+    color:#3EB5AD;
+    margin-bottom: 15px;
+}
+
+.mobile-item{
+    padding: 0px 10px 0 0px;
+}
+
+.mobile-linha {
+    top: 15px !important;
+    position: relative;
+    border: 0.5px solid #3EB5AD;
+}
+
+.flex-item-1 {
+	flex: 1;
+}
+
+/* Os itens não se expandem para ocupar o container. */
+.grow0 {
+	flex-grow: 0;
+}
+
+/* Os itens se expandem igualmente para ocupar o container. Utilizando apenas o flex-grow, o crescimento é distribuído igualmente antes e depois do conteúdo de cada elemento. (pois por padrão o flex-basis é auto) */
+.grow1 {
+	flex-grow: 1;
+}
+
+/* Os itens se expandem duas vezes mais que aqueles com flex-grow: 1; */
+.grow2 {
+	flex-grow: 2;
 }

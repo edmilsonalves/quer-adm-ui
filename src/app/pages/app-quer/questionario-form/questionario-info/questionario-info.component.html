@@ -2,7 +2,7 @@
 
 <div class="flex flex-wrap">
 
-    <div class="form-group item">
+    <div class="form-group item grow1">
         <label for="input-8" class="label-uppercase">Nome técnico</label>
         <input class="form-control form-control-sm" id="input-8" type="text">
     </div>
@@ -26,11 +26,49 @@
             <option>0158 - Unimed Cascavel</option>
         </select>
     </div>
+
+</div>
+
+<div class="flex mobile">
+    <div class="mobile-item grow0">Mobile</div>
+    <div class="mobile-item flex-item-1">
+        <div class="mobile-linha"></div>
+    </div>
+</div>
+
+<div class="flex flex-wrap">
+    <div class="form-group item">
+        <label for="idTextHome" class="label-uppercase">Texto de chamada na home</label>
+        <input class="form-control form-control-sm" id="idTextHome" type="text">
+    </div>
+    <div class="form-group item">
+        <label for="idPerDia" class="label-uppercase">Período em dias</label>
+        <input id="idPerDia" type="number" name="quantity" min="1" max="5" class="form-control form-control-sm">
+    </div>
+</div>
+
+<div class="flex flex-wrap">
+    <div class="form-group item grow1">
+        <div><label for="idDescricao" class="label-uppercase">Descrição</label><textarea
+                class="form-control" id="idDescricao"></textarea></div>
+    </div>
+</div>
+
+<div class="flex flex-wrap">
+    <div class="form-group item">
+        <label for="idPerDia" class="label-uppercase">Ícone</label>
+        <form class="dropzone" dropzone action="#" id="my-awesome-dropzone"></form>
+    </div>
+    <div class="form-group item">
+        <label for="idPerDia" class="label-uppercase">Imagem</label>
+        <form class="dropzone" dropzone action="#" id="my-awesome-dropzone"></form>
+    </div>
 </div>
 
 <div class="flex buttons">
     <div class="buttom-item">
-        <button class="btn btn-secondary btn-rounded" type="button">Cancelar</button>
+        <button [routerLink]="'/pages/app-quer/questionario'" class="btn btn-secondary btn-rounded"
+            type="button">Cancelar</button>
     </div>
     <div class="buttom-item">
         <button class="btn btn-info btn-rounded" type="button">Salvar</button>

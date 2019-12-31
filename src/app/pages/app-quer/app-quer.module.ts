@@ -14,6 +14,8 @@ import { ColetaComponent } from './questionario-form/coleta/coleta.component';
 import { QuestionarioComponent } from './questionario/questionario.component';
 import { QuestionarioInfoComponent } from './questionario-form/questionario-info/questionario-info.component';
 import { EmpresaComponent } from '../../shared/components/empresa/empresa.component';
+import { ImagemComponent } from 'src/app/shared/components/imagem/imagem.component';
+import { ImageUploaderComponent } from 'src/app/shared/components/image-uploader/image-uploader.component';
 
 
 export const routes = [
@@ -21,8 +23,8 @@ export const routes = [
   { path: 'questionario', component: QuestionarioComponent, data: { breadcrumb: 'Lista de questionarios' } },
   { path: 'questionario/:id', component: QuestionarioFormComponent,
     children:[
-      {path: '', redirectTo: 'questionario', pathMatch: 'full'},
-      {path: 'questionario', component: QuestionarioInfoComponent},
+      {path: '', redirectTo: 'info', pathMatch: 'full'},
+      {path: 'info', component: QuestionarioInfoComponent},
       {path: 'pergunta', component: PerguntaComponent},
       {path: 'pontuacao', component: PontuacaoComponent},
       {path: 'aprovacao', component: AprovacaoComponent},
@@ -41,7 +43,8 @@ export const routes = [
     PublicacaoComponent,
     ColetaComponent,
     QuestionarioInfoComponent,
-    EmpresaComponent],
+    EmpresaComponent,
+    ImageUploaderComponent],
   imports: [
     DirectivesModule,
     CommonModule,
