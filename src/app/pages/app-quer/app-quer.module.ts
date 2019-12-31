@@ -1,4 +1,3 @@
-import { QuestionarioComponent } from './questionario/questionario.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../../theme/directives/directives.module';
@@ -12,13 +11,17 @@ import { PontuacaoComponent } from './questionario-form/pontuacao/pontuacao.comp
 import { AprovacaoComponent } from './questionario-form/aprovacao/aprovacao.component';
 import { PublicacaoComponent } from './questionario-form/publicacao/publicacao.component';
 import { ColetaComponent } from './questionario-form/coleta/coleta.component';
+import { QuestionarioComponent } from './questionario/questionario.component';
+import { QuestionarioInfoComponent } from './questionario-form/questionario-info/questionario-info.component';
+
 
 export const routes = [
   { path: '', redirectTo: 'questionario', pathMatch: 'full' },
   { path: 'questionario', component: QuestionarioComponent, data: { breadcrumb: 'Lista de questionarios' } },
   { path: 'questionario/:id', component: QuestionarioFormComponent,
     children:[
-      {path: '', redirectTo: 'questionario-form', pathMatch: 'full'},
+      {path: '', redirectTo: 'questionario', pathMatch: 'full'},
+      {path: 'questionario', component: QuestionarioInfoComponent},
       {path: 'pergunta', component: PerguntaComponent},
       {path: 'pontuacao', component: PontuacaoComponent},
       {path: 'aprovacao', component: AprovacaoComponent},
@@ -35,7 +38,8 @@ export const routes = [
     PontuacaoComponent,
     AprovacaoComponent,
     PublicacaoComponent,
-    ColetaComponent ],
+    ColetaComponent,
+    QuestionarioInfoComponent],
   imports: [
     DirectivesModule,
     CommonModule,
