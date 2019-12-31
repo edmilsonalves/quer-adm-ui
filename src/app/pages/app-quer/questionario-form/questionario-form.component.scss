@@ -1,11 +1,9 @@
 .menu{
-    display: flex; /* ou inline-flex */
-    flex-direction: row;  
     font-size: 11px;
+    font-weight: 600;
  }
 
  .item {
-    font-size: 1em;
     color: #313131;
     padding: 2px 20px 5px 20px;
     text-align: center;

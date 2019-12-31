@@ -1,18 +1,43 @@
 
 // inicio css personalizado do appquer
 
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
 .body-box{
-    display: flex; /* ou inline-flex */
-    flex-direction: row;  
     background: #FFFFFF;
     margin-top: 10px;
-    padding: 10px;
+    padding: 30px;
     border-radius: 4px;    
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
 }
 
 label {
     display: inline-block;
     margin-bottom: 0.1rem;
+}
+
+.label-uppercase {
+    display: inline-block;
+    margin-bottom: 0.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
 }
 
 .titulo{
@@ -30,5 +55,31 @@ label {
     margin-bottom: 30px;
 }
 
+.buttons{
+    justify-content: flex-end;
+}
+
+.buttom-item{
+    margin-right: 10px;
+}
+
+.btn-rounded{
+    border-radius: 2rem;
+}
+
+.btn {
+    padding: 0.175rem 1.75rem;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #3EB5AD;
+    border-color: #3EB5AD;
+}
+.btn-info:hover {
+    color: #fff;
+    background-color: rgb(47, 163, 155);
+    border-color: rgb(47, 163, 155);
+}
 
 // fim css personalizado do appquer
