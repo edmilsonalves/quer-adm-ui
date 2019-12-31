@@ -13,6 +13,7 @@ import { PublicacaoComponent } from './questionario-form/publicacao/publicacao.c
 import { ColetaComponent } from './questionario-form/coleta/coleta.component';
 import { QuestionarioComponent } from './questionario/questionario.component';
 import { QuestionarioInfoComponent } from './questionario-form/questionario-info/questionario-info.component';
+import { EmpresaComponent } from '../../shared/components/empresa/empresa.component';
 
 
 export const routes = [
@@ -39,7 +40,8 @@ export const routes = [
     AprovacaoComponent,
     PublicacaoComponent,
     ColetaComponent,
-    QuestionarioInfoComponent],
+    QuestionarioInfoComponent,
+    EmpresaComponent],
   imports: [
     DirectivesModule,
     CommonModule,
