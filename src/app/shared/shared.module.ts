@@ -5,6 +5,7 @@ import { CampoExtraComponent } from './components/campo-extra/campo-extra.compon
 import { LoadingComponent } from './components/loading/loading.component';
 import { ImageUploaderComponent } from './components/image-uploader/image-uploader.component';
 import { MultipleImageUploaderComponent } from './components/multiple-image-uploader/multiple-image-uploader.component';
+import { EmpresaComponent } from './components/empresa/empresa.component';
 
 @NgModule({
   exports: [
@@ -12,6 +13,6 @@ import { MultipleImageUploaderComponent } from './components/multiple-image-uplo
     ImagemComponent
   ],
   imports: [],
-  declarations: [ImagemComponent, CampoExtraComponent, LoadingComponent, ImageUploaderComponent, MultipleImageUploaderComponent]
+  declarations: [ImagemComponent, CampoExtraComponent, LoadingComponent, ImageUploaderComponent, MultipleImageUploaderComponent, EmpresaComponent]
 })
 export class SharedModule { }
