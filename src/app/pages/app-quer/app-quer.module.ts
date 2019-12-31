@@ -21,8 +21,8 @@ export const routes = [
   { path: 'questionario', component: QuestionarioComponent, data: { breadcrumb: 'Lista de questionarios' } },
   { path: 'questionario/:id', component: QuestionarioFormComponent,
     children:[
-      {path: '', redirectTo: 'questionario', pathMatch: 'full'},
-      {path: 'questionario', component: QuestionarioInfoComponent},
+      {path: '', redirectTo: 'questionario-info', pathMatch: 'full'},
+      {path: 'questionario-info', component: QuestionarioInfoComponent},
       {path: 'pergunta', component: PerguntaComponent},
       {path: 'pontuacao', component: PontuacaoComponent},
       {path: 'aprovacao', component: AprovacaoComponent},
