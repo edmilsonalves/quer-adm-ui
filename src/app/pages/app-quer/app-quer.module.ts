@@ -16,6 +16,7 @@ import { QuestionarioInfoComponent } from './questionario-form/questionario-info
 import { EmpresaComponent } from '../../shared/components/empresa/empresa.component';
 import { ImagemComponent } from 'src/app/shared/components/imagem/imagem.component';
 import { ImageUploaderComponent } from 'src/app/shared/components/image-uploader/image-uploader.component';
+import { PreviewComponent } from './questionario-form/preview/preview.component';
 
 
 export const routes = [
@@ -26,6 +27,7 @@ export const routes = [
       {path: '', redirectTo: 'info', pathMatch: 'full'},
       {path: 'info', component: QuestionarioInfoComponent},
       {path: 'pergunta', component: PerguntaComponent},
+      {path: 'preview', component: PreviewComponent},
       {path: 'pontuacao', component: PontuacaoComponent},
       {path: 'aprovacao', component: AprovacaoComponent},
       {path: 'publicacao', component: PublicacaoComponent},
@@ -44,7 +46,8 @@ export const routes = [
     ColetaComponent,
     QuestionarioInfoComponent,
     EmpresaComponent,
-    ImageUploaderComponent],
+    ImageUploaderComponent,
+    PreviewComponent],
   imports: [
     DirectivesModule,
     CommonModule,
