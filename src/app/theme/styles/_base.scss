@@ -78,6 +78,10 @@ label {
     background-color: rgb(47, 163, 155);
     border-color: rgb(47, 163, 155);
 }
+.cb-empresa{
+    min-width: 180px;
+    max-width: 360px;
+}
 
 /* Os itens não se expandem para ocupar o container. */
 .grow0 {
@@ -106,5 +110,25 @@ label {
     max-width: 308px;
 }
 
+.ngx-datatable.bootstrap {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row.datatable-row-even {
+    background-color: #F6F7F8;
+}
+
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row {
+    vertical-align: top;
+    border-top: 1px solid #d1d4d7;
+    background-color: #FFFFFF;
+}
+
+.ngx-datatable.bootstrap .datatable-footer {
+    background: #3EB5AD !important;
+    color: #ededed;
+    margin-top: -10px;
+}
 
 // fim css personalizado do appquer
