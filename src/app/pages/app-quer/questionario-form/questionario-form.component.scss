@@ -10,18 +10,18 @@
     font-weight: 600;
  }
 
- .item {
+ .menu-item {
     color: #313131;
     padding: 2px 20px 5px 20px;
     text-align: center;
 }
 
-.item-active {
+.menu-item-active {
     border-bottom: 3px solid;
     color: #3EB5AD;
 }
 
-.linha {
+.menu-linha {
     top: -1.9px !important;
     position: relative;
     border: 1px solid #B3C7D6;

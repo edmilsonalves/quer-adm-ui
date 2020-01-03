@@ -20,6 +20,10 @@ body {
 	flex-wrap: wrap;
 }
 
+.basis-300 {
+	flex-basis: 300px;
+}
+
 label {
     display: inline-block;
     margin-bottom: 0.1rem;
@@ -89,5 +93,18 @@ label {
 .grow2 {
 	flex-grow: 2;
 }
+
+.item-col-614 {
+    padding: 0px 20px 0 0px;
+    min-width: 100px;
+    max-width: 614px;
+}
+
+.item-col-308 {
+    padding: 0px 20px 0 0px;
+    min-width: 100px;
+    max-width: 308px;
+}
+
 
 // fim css personalizado do appquer
