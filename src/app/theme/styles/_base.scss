@@ -1,10 +1,6 @@
 
 // inicio css personalizado do appquer
 
-* {
-    box-sizing: border-box;
-  }
-
 body {
     margin: 0;
     font-family: $font-family;
@@ -16,20 +12,16 @@ body {
     background-color: #fff;
 }
 
-.grid-container {
-    display: grid;
+.flex {
+    display: flex;
 }
 
-@media (min-width: 968px) {
-    .grid-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-    }
+.flex-wrap {
+	flex-wrap: wrap;
 }
-  
-.item{
-    margin: 10px;
+
+.basis-300 {
+	flex-basis: 300px;
 }
 
 label {
@@ -61,16 +53,11 @@ label {
 }
 
 .buttons{
-    display: grid;
-    grid-template-columns: 140px 106px;
-    justify-content: end;
-    grid-gap: 10px;
-    margin-right: 10px;
-
+    justify-content: flex-end;
 }
 
-.buttom-item {
-    text-align: right;
+.buttom-item{
+    margin-right: 10px;
 }
 
 .btn-rounded{
@@ -91,5 +78,33 @@ label {
     background-color: rgb(47, 163, 155);
     border-color: rgb(47, 163, 155);
 }
+
+/* Os itens não se expandem para ocupar o container. */
+.grow0 {
+	flex-grow: 0;
+}
+
+/* Os itens se expandem igualmente para ocupar o container. Utilizando apenas o flex-grow, o crescimento é distribuído igualmente antes e depois do conteúdo de cada elemento. (pois por padrão o flex-basis é auto) */
+.grow1 {
+	flex-grow: 1;
+}
+
+/* Os itens se expandem duas vezes mais que aqueles com flex-grow: 1; */
+.grow2 {
+	flex-grow: 2;
+}
+
+.item-col-614 {
+    padding: 0px 20px 0 0px;
+    min-width: 100px;
+    max-width: 614px;
+}
+
+.item-col-308 {
+    padding: 0px 20px 0 0px;
+    min-width: 100px;
+    max-width: 308px;
+}
+
 
 // fim css personalizado do appquer
