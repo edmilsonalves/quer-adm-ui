@@ -1,37 +1,39 @@
-<div class="grid-container">
+<div class="formgrid">
 
     <div class="form-group item">
         <sv-empresa></sv-empresa>
     </div>
 
-    <div class="form-group item">
-        <label for="input-8" class="label-uppercase">Nome técnico</label>
-        <input class="form-control form-control-sm" id="input-8" type="text">
+    <div class="grid-container grid-template-columns-3">
+        <div class="form-group item">
+            <label for="input-8" class="label-uppercase">Nome técnico</label>
+            <input class="form-control form-control-sm" id="input-8" type="text">
+        </div>
+    
+        <div class="form-group item">
+            <label for="idEmpresa" class="label-uppercase">Categoria</label>
+            <select class="form-control form-control-sm" id="idEmpresa">
+                <option selected=""></option>
+                <option>0032 - Unimed Curitiba</option>
+                <option>0005 - Unimed Londrina</option>
+                <option>0158 - Unimed Cascavel</option>
+            </select>
+        </div>
+    
+        <div class="form-group item">
+            <label for="idEmpresa" class="label-uppercase">Restrição do tipo de coleta</label>
+            <select class="form-control form-control-sm" id="idEmpresa">
+                <option selected=""></option>
+                <option>0032 - Unimed Curitiba</option>
+                <option>0005 - Unimed Londrina</option>
+                <option>0158 - Unimed Cascavel</option>
+            </select>
+        </div>
     </div>
 
-    <div class="form-group item">
-        <label for="idEmpresa" class="label-uppercase">Categoria</label>
-        <select class="form-control form-control-sm" id="idEmpresa">
-            <option selected=""></option>
-            <option>0032 - Unimed Curitiba</option>
-            <option>0005 - Unimed Londrina</option>
-            <option>0158 - Unimed Cascavel</option>
-        </select>
-    </div>
-
-    <div class="form-group item">
-        <label for="idEmpresa" class="label-uppercase">Restrição do tipo de coleta</label>
-        <select class="form-control form-control-sm" id="idEmpresa">
-            <option selected=""></option>
-            <option>0032 - Unimed Curitiba</option>
-            <option>0005 - Unimed Londrina</option>
-            <option>0158 - Unimed Cascavel</option>
-        </select>
-    </div>
-
-    <div class="item mobile">
-        <div class="mobile-item grow0">Mobile</div>
-        <div class="mobile-item flex-item-1">
+    <div class="grid-container mobile">
+        <div class="mobile-item item">Mobile</div>
+        <div class="mobile-item item">
             <div class="mobile-linha"></div>
         </div>
     </div>

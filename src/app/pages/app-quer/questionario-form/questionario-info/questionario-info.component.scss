@@ -1,12 +1,22 @@
+.item {
+	max-width:400px;
+}
+
+.grid-template-columns-3 {
+    grid-template-columns: 420px minmax(200px, 300px) minmax(200px, 300px);
+}
 
 .mobile{
     font-size: 18px;
     color:#3EB5AD;
     margin-bottom: 15px;
+    grid-template-columns: 80px auto;
+    grid-auto-flow: column;
 }
 
 .mobile-item{
     padding: 0px 10px 0 0px;
+    max-width:95%;
 }
 
 .mobile-linha {
@@ -15,6 +25,3 @@
     border: 0.5px solid #3EB5AD;
 }
 
-.flex-item-1 {
-	flex: 1;
-}

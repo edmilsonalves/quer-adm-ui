@@ -1,4 +1,4 @@
-.card-body{
+.grid-container{
     background: #FFFFFF;
     margin-top: 10px;
     padding: 30px 15px 30px 30px;
@@ -16,13 +16,12 @@
     text-align: center;
 }
 
-
 .menu-item-active {
     border-bottom: 3px solid;
     color: #3EB5AD;
 }
 
-.linha {
+.menu-linha {
     top: 4.9px !important;
     position: relative;
     border: 1px solid #B3C7D6;

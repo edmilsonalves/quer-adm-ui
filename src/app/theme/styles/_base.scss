@@ -20,6 +20,14 @@ body {
     display: grid;
 }
 
+@media (min-width: 968px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+}
+  
 .item{
     margin: 10px;
 }
