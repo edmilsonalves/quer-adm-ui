@@ -17,6 +17,7 @@ import { EmpresaComponent } from '../../shared/components/empresa/empresa.compon
 import { ImagemComponent } from 'src/app/shared/components/imagem/imagem.component';
 import { ImageUploaderComponent } from 'src/app/shared/components/image-uploader/image-uploader.component';
 import { PreviewComponent } from './questionario-form/preview/preview.component';
+import { NgxPaginationModule } from '../../../../node_modules/ngx-pagination';
 
 
 export const routes = [
@@ -55,6 +56,7 @@ export const routes = [
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
+    NgxPaginationModule,
     RouterModule.forChild(routes),
   ]
 })

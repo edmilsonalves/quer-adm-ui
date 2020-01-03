@@ -1,6 +1,40 @@
-<div class="titulo">
-    Lista de questionário
-</div>
-<div class="subtitulo">
-    Lista / Questionário
+<div class="row">
+    <div class="col-12">
+        <div class="titulo">
+            Lista de questionário
+        </div>
+        <div class="subtitulo">
+            Cadastro / Lista de questionário
+        </div>
+        <div class="subtitulo">
+            <div style="text-align:center">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cód singular</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Situaçao</th>
+                            <th scope="col">Criado Em</th>
+                            <th scope="col">Alterado Em</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of collection.data | paginate: config">
+                            <td>{{item.codSingular}}</td>
+                            <td>{{item.nome}}</td>
+                            <td>{{item.categoria}}</td>
+                            <td>{{item.situacao}}</td>
+                            <td>{{item.criadoEm}}</td>
+                            <td>{{item.alteradoEm}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pagination-controls (pageChange)="pageChanged($event)" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+
+            </div>
+        </div>
+    </div>
 </div>
