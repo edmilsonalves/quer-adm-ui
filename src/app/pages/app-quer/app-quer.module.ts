@@ -17,6 +17,7 @@ import { EmpresaComponent } from '../../shared/components/empresa/empresa.compon
 import { ImagemComponent } from 'src/app/shared/components/imagem/imagem.component';
 import { ImageUploaderComponent } from 'src/app/shared/components/image-uploader/image-uploader.component';
 import { PreviewComponent } from './questionario-form/preview/preview.component';
+import { NgxDatatableModule } from '../../../../node_modules/@swimlane/ngx-datatable';
 
 
 export const routes = [
@@ -49,6 +50,7 @@ export const routes = [
     ImageUploaderComponent,
     PreviewComponent],
   imports: [
+    NgxDatatableModule,
     DirectivesModule,
     CommonModule,
     HttpClientModule,

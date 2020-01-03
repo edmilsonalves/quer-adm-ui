@@ -4,3 +4,48 @@
 <div class="subtitulo">
     Lista / Questionário
 </div>
+
+<ngx-datatable #table class="bootstrap" [headerHeight]="50" [limit]="10" [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'"
+    [rows]="rows" [selected]="selected" [selectionType]="'checkbox'" (activate)="onActivate($event)" (select)='onSelect($event)'>
+
+    <ngx-datatable-column name="codSingular">
+        <ng-template ngx-datatable-cell-template let-value="value">
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Nome">
+        <ng-template ngx-datatable-cell-template let-value="value">
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Categoria">
+        <ng-template ngx-datatable-cell-template let-value="value">
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+
+    <ngx-datatable-column name="Situacao">
+        <ng-template ngx-datatable-cell-template let-value="value">
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+
+    <ngx-datatable-column name="CriadoEm">
+        <ng-template ngx-datatable-cell-template let-value="value">
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+
+    <ngx-datatable-column name="AlteradoEm">
+        <ng-template ngx-datatable-cell-template let-value="value">
+            {{value}}
+        </ng-template>
+    </ngx-datatable-column>
+
+
+</ngx-datatable>
