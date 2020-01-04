@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { FeedService } from './feed.service';
 
 @Component({
-  selector: 'az-feed',
+  selector: 'appquer-feed',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.scss'],

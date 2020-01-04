@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation, ViewChild, HostListener, Input, ElementRef} from '@angular/core';
 
 @Component({
-  selector: 'az-back-top',
+  selector: 'appquer-back-top',
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./back-top.component.scss'],
   template: `

@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-tabs-accordions',
+  selector: 'appquer-tabs-accordions',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './tabs-accordions.component.html'
 })

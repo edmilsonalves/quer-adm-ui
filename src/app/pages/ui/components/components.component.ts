@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-components',
+  selector: 'appquer-components',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './components.component.html'
 })

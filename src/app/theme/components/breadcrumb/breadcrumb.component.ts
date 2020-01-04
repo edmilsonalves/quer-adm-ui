@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 import { AppConfig } from "../../../app.config";
 
 @Component({
-    selector: 'az-breadcrumb',
+    selector: 'appquer-breadcrumb',
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./breadcrumb.component.scss'],
     templateUrl: './breadcrumb.component.html'
@@ -75,7 +75,7 @@ export class BreadcrumbComponent {
 // import { AppState } from "../../../app.state";
 
 // @Component({
-//     selector: 'az-breadcrumb',
+//     selector: 'appquer-breadcrumb',
 //     encapsulation: ViewEncapsulation.None,
 //     styleUrls: ['./breadcrumb.component.scss'],
 //     templateUrl: './breadcrumb.component.html'

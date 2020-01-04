@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-grid',
+  selector: 'appquer-grid',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss']

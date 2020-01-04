@@ -30,7 +30,7 @@ const quotes = [
 const types = ['success', 'error', 'info', 'warning'];
 
 @Component({
-  selector: 'az-toaster',  
+  selector: 'appquer-toaster',  
   templateUrl: './toaster.component.html',
   encapsulation: ViewEncapsulation.None
 })

@@ -3,7 +3,7 @@ import { AppConfig } from "../../../app.config";
 import { DataMapService } from './datamap.service';
 
 @Component({
-  selector: 'az-datamap',
+  selector: 'appquer-datamap',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './datamap.component.html',
   styleUrls: ['./datamap.component.scss'],

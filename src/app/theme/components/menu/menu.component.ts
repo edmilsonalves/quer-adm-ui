@@ -4,7 +4,7 @@ import { MenuService } from './menu.service';
 import { AppState } from "../../../app.state";
 
 @Component({
-    selector: 'az-menu',
+    selector: 'appquer-menu',
     encapsulation: ViewEncapsulation.None,
     templateUrl: './menu.component.html',
     styleUrls: ['./menu.component.scss'],

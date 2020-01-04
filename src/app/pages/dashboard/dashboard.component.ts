@@ -3,7 +3,7 @@ import { AppConfig } from "../../app.config";
 import { DashboardService } from './dashboard.service';
 
 @Component({
-  selector: 'az-dashboard',
+  selector: 'appquer-dashboard',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],

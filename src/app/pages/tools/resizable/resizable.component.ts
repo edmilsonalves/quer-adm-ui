@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {ResizeEvent} from 'angular-resizable-element';
 
 @Component({
-  selector: 'az-resizable',
+  selector: 'appquer-resizable',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './resizable.component.html',
   styleUrls: ['./resizable.component.scss']

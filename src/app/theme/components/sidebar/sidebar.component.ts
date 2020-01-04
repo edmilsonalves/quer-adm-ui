@@ -4,7 +4,7 @@ import { AppState } from "../../../app.state";
 import { SidebarService } from './sidebar.service';
 
 @Component({
-    selector: 'az-sidebar',
+    selector: 'appquer-sidebar',
     encapsulation: ViewEncapsulation.None,
     templateUrl: './sidebar.component.html',
     styleUrls: ['./sidebar.component.scss'],

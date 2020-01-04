@@ -1,13 +1,13 @@
-<az-navbar></az-navbar>
+<appquer-navbar></appquer-navbar>
 <div class="container-fluid">         
     <div class="row"> 
-        <az-menu></az-menu>
-        <!--<az-sidebar></az-sidebar>-->
+        <appquer-menu></appquer-menu>
+        <!--<appquer-sidebar></appquer-sidebar>-->
         <div class="main-wrapper"  [ngClass]="{'menu-collapsed': isMenuCollapsed}"> 
-            <div class="az-overlay" *ngIf="!isMenuCollapsed" (click)="hideMenu()"></div>
+            <div class="appquer-overlay" *ngIf="!isMenuCollapsed" (click)="hideMenu()"></div>
 
             <div class="main">
-                <!-- <az-breadcrumb></az-breadcrumb> -->
+                <!-- <appquer-breadcrumb></appquer-breadcrumb> -->
                 <router-outlet></router-outlet>
             </div> 
 
@@ -30,7 +30,7 @@
                 
             </footer>
 
-            <az-back-top position="200"></az-back-top>
+            <appquer-back-top position="200"></appquer-back-top>
 
         </div>
     </div>

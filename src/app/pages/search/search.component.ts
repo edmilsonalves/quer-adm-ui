@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-search',
+  selector: 'appquer-search',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './search.component.html'
 })

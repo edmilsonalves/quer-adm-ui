@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { AppConfig } from "../../../app.config";
 
 @Component({
-  selector: 'az-dynamic-chart',
+  selector: 'appquer-dynamic-chart',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './dynamic-chart.component.html'
 })

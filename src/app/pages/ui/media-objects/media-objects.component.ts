@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-media-objects',
+  selector: 'appquer-media-objects',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './media-objects.component.html'
 })

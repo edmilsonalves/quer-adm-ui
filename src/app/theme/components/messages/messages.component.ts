@@ -3,7 +3,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 import {MessagesService} from './messages.service';
 
 @Component({
-    selector: 'az-messages',
+    selector: 'appquer-messages',
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./messages.component.scss'],
     templateUrl: './messages.component.html',

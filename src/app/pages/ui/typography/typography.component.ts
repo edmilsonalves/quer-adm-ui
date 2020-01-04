@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'az-typography',
+  selector: 'appquer-typography',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './typography.component.html',
   styleUrls: ['./typography.component.scss']

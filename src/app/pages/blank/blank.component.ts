@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-blank',
+  selector: 'appquer-blank',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './blank.component.html',
   styleUrls: ['./blank.component.scss']

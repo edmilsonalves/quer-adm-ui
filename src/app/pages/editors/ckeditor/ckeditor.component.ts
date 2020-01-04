@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-ckeditor',
+  selector: 'appquer-ckeditor',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './ckeditor.component.html'
 })

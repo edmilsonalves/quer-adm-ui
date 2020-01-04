@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation} from '@angular/core';
 import { ChatService } from './chat.service';
 
 @Component({
-  selector: 'az-chat',
+  selector: 'appquer-chat',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss'],

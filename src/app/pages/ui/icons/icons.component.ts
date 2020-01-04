@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { IconsService } from './icons.service';
 
 @Component({
-  selector: 'az-icons',  
+  selector: 'appquer-icons',  
   encapsulation: ViewEncapsulation.None,
   templateUrl: './icons.component.html',
   styleUrls: ['./icons.component.scss'],

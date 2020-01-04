@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-root',
+  selector: 'appquer-root',
   encapsulation: ViewEncapsulation.None,
   template:`<router-outlet></router-outlet>`,
   styleUrls: ['./app.component.scss']

@@ -3,7 +3,7 @@ import { AppState } from '../../../app.state';
 import { SidebarService } from '../sidebar/sidebar.service';
 
 @Component({
-  selector: 'az-navbar',
+  selector: 'appquer-navbar',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
@@ -20,7 +20,7 @@ export class NavbarComponent {
     }
 
     public closeSubMenus(){
-       /* when using <az-sidebar> instead of <az-menu> uncomment this line */
+       /* when using <appquer-sidebar> instead of <appquer-menu> uncomment this line */
       // this._sidebarService.closeAllSubMenus();
     }
 

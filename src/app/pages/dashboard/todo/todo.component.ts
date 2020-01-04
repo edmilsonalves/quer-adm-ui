@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { TodoService } from './todo.service';
 
 @Component({
-  selector: 'az-todo',
+  selector: 'appquer-todo',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss'],

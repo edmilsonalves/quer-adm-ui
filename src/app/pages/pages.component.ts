@@ -3,7 +3,7 @@ import { Location } from '@angular/common';
 import { AppState } from '../app.state';
 
 @Component({
-  selector: 'az-pages',
+  selector: 'appquer-pages',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.scss'],

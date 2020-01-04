@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-buttons',
+  selector: 'appquer-buttons',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './buttons.component.html',
   styleUrls: ['./buttons.component.scss']

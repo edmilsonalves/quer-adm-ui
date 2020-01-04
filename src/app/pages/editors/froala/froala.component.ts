@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'az-froala',
+  selector: 'appquer-froala',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './froala.component.html'
 })
