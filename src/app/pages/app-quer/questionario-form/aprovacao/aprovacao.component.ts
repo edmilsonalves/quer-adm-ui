@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sv-aprovacao',
+  selector: 'quer-aprovacao',
   templateUrl: './aprovacao.component.html',
   styleUrls: ['./aprovacao.component.scss']
 })

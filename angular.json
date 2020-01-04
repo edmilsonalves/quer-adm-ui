@@ -31,7 +31,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "sv",      
+      "prefix": "quer",      
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

@@ -6,7 +6,7 @@ import { HttpParams } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'sv-produtos',
+  selector: 'quer-produtos',
   templateUrl: './produtos.component.html',
   styleUrls: ['./produtos.component.scss'],
   animations: [

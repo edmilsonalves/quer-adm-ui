@@ -4,7 +4,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'sv-campo-extra',
+  selector: 'quer-campo-extra',
   templateUrl: './campo-extra.component.html',
   styleUrls: ['./campo-extra.component.scss']
 })

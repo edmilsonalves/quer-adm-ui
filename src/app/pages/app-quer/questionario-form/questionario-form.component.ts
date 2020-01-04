@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sv-questionario-form',
+  selector: 'quer-questionario-form',
   templateUrl: './questionario-form.component.html',
   styleUrls: ['./questionario-form.component.scss']
 })

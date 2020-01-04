@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sv-coleta',
+  selector: 'quer-coleta',
   templateUrl: './coleta.component.html',
   styleUrls: ['./coleta.component.scss']
 })

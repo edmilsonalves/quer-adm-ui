@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sv-loading',
+  selector: 'quer-loading',
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.scss']
 })

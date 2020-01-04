@@ -8,7 +8,7 @@ import { Imagem } from '../../../model/produto/imagem.model';
 import { TipoAtributoService } from './tipo-atributo.service';
 
 @Component({
-  selector: 'sv-variacao',
+  selector: 'quer-variacao',
   templateUrl: './variacao.component.html',
   styleUrls: ['./variacao.component.scss'],
   animations: [

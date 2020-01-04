@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef, Input } from '@angular/core';
 import { Imagem } from 'src/app/model/produto/imagem.model';
 
 @Component({
-  selector: 'sv-multiple-image-uploader',
+  selector: 'quer-multiple-image-uploader',
   templateUrl: './multiple-image-uploader.component.html',
   styleUrls: ['./multiple-image-uploader.component.scss']
 })

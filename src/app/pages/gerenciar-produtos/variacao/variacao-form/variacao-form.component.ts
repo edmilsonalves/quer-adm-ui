@@ -9,7 +9,7 @@ import { Imagem } from 'src/app/model/produto/imagem.model';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'sv-variacao-form',
+  selector: 'quer-variacao-form',
   templateUrl: './variacao-form.component.html',
   styleUrls: ['./variacao-form.component.scss']
 })

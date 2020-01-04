@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sv-image-uploader',
+  selector: 'quer-image-uploader',
   templateUrl: './image-uploader.component.html',
   styleUrls: ['./image-uploader.component.scss']
 })

@@ -186,16 +186,16 @@
                   </div>
 
                   <div class="col-sm-12">
-                    <sv-campo-extra (add)="getCampoExtra($event)"></sv-campo-extra>
+                    <quer-campo-extra (add)="getCampoExtra($event)"></quer-campo-extra>
                   </div>
                 </div>
                 <div class="tab-pane" id="tabVariacao">
-                  <sv-variacao [listVariacao]="form.get('listVariacao').value"
+                  <quer-variacao [listVariacao]="form.get('listVariacao').value"
                     (ocultarBtSalvar)="ocultarBtSalvar($event)" (houveAlteracao)="houveAlteracaoVariacao($event)"
-                    *ngIf="tabAtual == 'tabVariacao' && form.get('listVariacao').value"></sv-variacao>
+                    *ngIf="tabAtual == 'tabVariacao' && form.get('listVariacao').value"></quer-variacao>
                 </div>
                 <div class="tab-pane" id="tabImagem">
-                  <sv-imagem [listImagem]="form.get('listImagem').value" *ngIf="tabAtual == 'tabImagem'"></sv-imagem>
+                  <quer-imagem [listImagem]="form.get('listImagem').value" *ngIf="tabAtual == 'tabImagem'"></quer-imagem>
                 </div>
                 <div class="tab-pane" id="tabPesoDimencao">
                   <div class="form-group col-sm-12">

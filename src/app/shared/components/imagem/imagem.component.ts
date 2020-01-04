@@ -14,7 +14,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { HttpParams } from '@angular/common/http';
 
 @Component({
-  selector: 'sv-imagem',
+  selector: 'quer-imagem',
   templateUrl: './imagem.component.html',
   styleUrls: ['./imagem.component.scss']
 })

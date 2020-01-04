@@ -14,7 +14,7 @@ import { HttpParams } from '@angular/common/http';
 import { Campo } from 'src/app/model/campo.extra.model';
 
 @Component({
-  selector: 'sv-produto-novo',
+  selector: 'quer-produto-novo',
   templateUrl: './produto-novo.component.html',
   styleUrls: ['./produto-novo.component.scss'],
   animations: [

@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
 
 @Component({
-  selector: 'sv-questionario',
+  selector: 'quer-questionario',
   templateUrl: './questionario.component.html',
   styleUrls: ['./questionario.component.scss']
 })

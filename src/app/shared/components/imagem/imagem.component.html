@@ -3,7 +3,7 @@
     <a style="cursor: pointer;"><img src="../assets/img/img-button/upload.jpg" width="50" height="50"
         ngbTooltip="Clique para adicionar uma nova imagens" container="body" placement="top"></a>
   </label>
-  <sv-loading *ngIf="carregando"></sv-loading>
+  <quer-loading *ngIf="carregando"></quer-loading>
 
   <input id="file-input" type="file" style="display: none" multiple (change)="onChange($event)"/>
 </div>

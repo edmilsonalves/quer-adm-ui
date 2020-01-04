@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sv-preview',
+  selector: 'quer-preview',
   templateUrl: './preview.component.html',
   styleUrls: ['./preview.component.scss']
 })

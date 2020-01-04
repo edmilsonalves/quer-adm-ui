@@ -19,7 +19,7 @@ import { VariacaoService } from '../variacao/variacao.service';
 import { StatusProdutoEnum } from '../../../enums/status-produto-enum';
 
 @Component({
-    selector: 'sv-form-produto',
+    selector: 'quer-form-produto',
     templateUrl: './produto-edit.component.html',
     styleUrls: ['./produto-edit.component.scss'],
     animations: [

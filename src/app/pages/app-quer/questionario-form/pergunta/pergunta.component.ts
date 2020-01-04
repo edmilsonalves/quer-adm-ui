@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sv-pergunta',
+  selector: 'quer-pergunta',
   templateUrl: './pergunta.component.html',
   styleUrls: ['./pergunta.component.scss']
 })
