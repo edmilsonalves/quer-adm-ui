@@ -14,9 +14,18 @@
         </div>
 
         <div class="row" style="margin-left: -11px;">
-            <div class="form-group col-md-12 col-sm-12 col-lg-2">
+            <div class="form-group col-md-12 col-sm-12 col-lg-3">
                 <label for="input-8" class="label-uppercase">Nome</label>
                 <input class="form-control form-control-sm" id="input-8" type="text">
+            </div>
+
+            <div class="form-group col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
+                <label for="idEmpresa" class="label-uppercase">Situação</label>
+                <select class="form-control form-control-sm" id="idEmpresa">
+                    <option selected=""></option>
+                    <option>Ativo/Aprovado</option>
+                    <option>Rascunho</option>
+                </select>
             </div>
 
             <div class="form-group col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
@@ -27,13 +36,25 @@
                     <option>0032 - Atualização de perfil</option>
                 </select>
             </div>
-
-            <div class="item-button col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
-                <button type="button" class="btn btn-outline-info btn-rounded">Buscar</button>
-            </div>
         </div>
 
 
+        <div class="row col-md-12 col-sm-12 col-lg-12" style="margin-left: -21px;">
+
+            <div class="form-group col-5 col-md-5 col-sm-5 col-lg-3">
+                <label for="idDataInicio" class="label-uppercase">Período de cadastro</label>
+                <input class="form-control form-control-sm" id="idDataInicio" type="date">
+            </div>
+            <div style="margin-top: 32px;">a</div>
+            <div class="form-group col-4 col-md-4 col-sm-4 col-lg-3" style="margin-top: 1.4px;">
+                <label for="idDataFim" class="label-upperc  ase"></label>
+                <input class="form-control form-control-sm" id="idDataFim" type="date">
+            </div>
+
+            <div class="item-button col-2 col-md-2 col-sm-2 col-lg-2">
+                <button type="button" class="btn btn-outline-info btn-rounded">Buscar</button>
+            </div>
+        </div>
 
         <ngx-datatable id="idListQuestionario" #table class="bootstrap" [headerHeight]="50" [limit]="10"
             [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'" [rows]="rows">
