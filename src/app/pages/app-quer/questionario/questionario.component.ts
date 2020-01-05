@@ -16,14 +16,6 @@ export class QuestionarioComponent implements OnInit {
   temp = [];
   selected = [];
 
-  columns = [
-      { prop: 'codSingular' },
-      { name: 'nome' },
-      { name: 'categoria' },
-      { name: 'situacao' },
-      { name: 'criadoEm' },
-      { name: 'alteradoEm' }
-  ];
   @ViewChild(DatatableComponent, {static: false}) table: DatatableComponent;
 
   constructor() {

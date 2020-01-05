@@ -6,15 +6,14 @@
 </div>
 
 <div class="row">
-    <div class="col">
-
-        <div class="row">
+    <div class="col-12">
+        <div class="row" style="margin-left: -11px;">
             <div class="form-group col-md-12 col-sm-12 col-lg-3">
                 <quer-empresa></quer-empresa>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-left: -11px;">
             <div class="form-group col-md-12 col-sm-12 col-lg-2">
                 <label for="input-8" class="label-uppercase">Nome</label>
                 <input class="form-control form-control-sm" id="input-8" type="text">
@@ -35,46 +34,25 @@
         </div>
 
 
+
         <ngx-datatable id="idListQuestionario" #table class="bootstrap" [headerHeight]="50" [limit]="10"
             [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'" [rows]="rows">
 
-            <ngx-datatable-column name="codSingular">
-                <ng-template ngx-datatable-cell-template let-value="value">
-                    {{value}}
-                </ng-template>
+            <ngx-datatable-column name="Cód singular" prop="codSingular">
+                {{value}}
             </ngx-datatable-column>
 
-            <ngx-datatable-column name="Nome">
-                <ng-template ngx-datatable-cell-template let-value="value">
-                    {{value}}
-                </ng-template>
+            <ngx-datatable-column name="Nome" prop="nome">
+                {{value}}
             </ngx-datatable-column>
 
-            <ngx-datatable-column name="Categoria">
-                <ng-template ngx-datatable-cell-template let-value="value">
-                    {{value}}
-                </ng-template>
+            <ngx-datatable-column name="Categoria" prop="categoria">
+                {{value}}
             </ngx-datatable-column>
 
 
-            <ngx-datatable-column name="Situacao">
-                <ng-template ngx-datatable-cell-template let-value="value">
-                    {{value}}
-                </ng-template>
-            </ngx-datatable-column>
-
-
-            <ngx-datatable-column name="CriadoEm">
-                <ng-template ngx-datatable-cell-template let-value="value">
-                    {{value}}
-                </ng-template>
-            </ngx-datatable-column>
-
-
-            <ngx-datatable-column name="AlteradoEm">
-                <ng-template ngx-datatable-cell-template let-value="value">
-                    {{value}}
-                </ng-template>
+            <ngx-datatable-column name="Situacao" prop="situacao">
+                {{value}}
             </ngx-datatable-column>
 
             <ngx-datatable-column name="Ações">

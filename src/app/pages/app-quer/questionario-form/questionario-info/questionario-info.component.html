@@ -1,89 +1,90 @@
-<div class="row">
-    <div class="form-group col-md-12 col-sm-12 col-lg-3">
-        <quer-empresa></quer-empresa>
-    </div>
-</div>
-
-<div class="row">
-
-    <div class="form-group col-md-12 col-sm-12 col-lg-3">
-        <label for="input-8" class="label-uppercase">Nome técnico</label>
-        <input class="form-control form-control-sm" id="input-8" type="text">
-    </div>
-
-    <div class="form-group col-md-6 col-sm-6 col-lg-2">
-        <label for="idEmpresa" class="label-uppercase">Categoria</label>
-        <select class="form-control form-control-sm" id="idEmpresa">
-            <option selected=""></option>
-            <option>0975 - Informações Básicas</option>
-            <option>0032 - Atualização de perfil</option>
-        </select>
-    </div>
-
-    <div class="form-group col-md-6 col-sm-6 col-lg-2">
-        <label for="idEmpresa" class="label-uppercase">Restrição do tipo de coleta</label>
-        <select class="form-control form-control-sm" id="idEmpresa">
-            <option selected=""></option>
-            <option>Todas as pessoas</option>
-            <option>Grupo de saúde</option>
-            <option>Perfil de saúde</option>
-            <option>Amostra</option>
-        </select>
-    </div>
-</div>
-
-<div class="row mobile">
-    <div class="mobile-item">Mobile</div>
-    <div class="mobile-item flex-item-1">
-        <div class="mobile-linha"></div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="form-group col-md-8 col-sm-8 col-lg-5">
-        <label for="idTextHome" class="label-uppercase">Texto de chamada na home</label>
-        <input class="form-control form-control-sm" id="idTextHome" type="text">
-    </div>
-    <div class="form-group col-md-4 col-sm-4 col-lg-2">
-        <label for="idPerDia" class="label-uppercase">Período em dias</label>
-        <input id="idPerDia" type="number" name="quantity" min="1" max="5" class="form-control form-control-sm">
-    </div>
-</div>
-
-<div class="row">
-    <div class="form-group col-md-12 col-sm-12 col-lg-7">
-        <div>
-            <label for="idDescricao" class="label-uppercase">Descrição</label>
-            <textarea class="form-control" id="idDescricao"></textarea>
+<div class="card-body">
+    <div class="row">
+        <div class="form-group col-md-12 col-sm-12 col-lg-3">
+            <quer-empresa></quer-empresa>
         </div>
     </div>
-</div>
 
-<div class="form-group">
-    <div class="custom-control custom-checkbox">
-        <input checked="" class="custom-control-input checkbox-success" id="checkboxSuccess"
-            type="checkbox">
-        <label class="custom-control-label" for="checkboxSuccess">Disponível para abertura do aplicativo</label>
-    </div>
-</div>
+    <div class="row">
 
-<div class="row">
-    <div class="form-group col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
-        <label for="idPerDia" class="label-uppercase">Ícone</label>
-        <form class="dropzone" dropzone action="#" id="my-awesome-dropzone"></form>
-    </div>
-    <div class="form-group col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
-        <label for="idPerDia" class="label-uppercase">Imagem</label>
-        <form class="dropzone" dropzone action="#" id="my-awesome-dropzone"></form>
-    </div>
-</div>
+        <div class="form-group col-md-12 col-sm-12 col-lg-3">
+            <label for="input-8" class="label-uppercase">Nome técnico</label>
+            <input class="form-control form-control-sm" id="input-8" type="text">
+        </div>
 
-<div class="row buttons">
-    <div class="buttom-item">
-        <button [routerLink]="'/pages/app-quer/questionario'" class="btn btn-secondary btn-rounded"
-            type="button">Cancelar</button>
+        <div class="form-group col-md-6 col-sm-6 col-lg-2">
+            <label for="idEmpresa" class="label-uppercase">Categoria</label>
+            <select class="form-control form-control-sm" id="idEmpresa">
+                <option selected=""></option>
+                <option>0975 - Informações Básicas</option>
+                <option>0032 - Atualização de perfil</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-6 col-sm-6 col-lg-2">
+            <label for="idEmpresa" class="label-uppercase">Restrição do tipo de coleta</label>
+            <select class="form-control form-control-sm" id="idEmpresa">
+                <option selected=""></option>
+                <option>Todas as pessoas</option>
+                <option>Grupo de saúde</option>
+                <option>Perfil de saúde</option>
+                <option>Amostra</option>
+            </select>
+        </div>
     </div>
-    <div class="buttom-item">
-        <button class="btn btn-info btn-rounded" type="button">Salvar</button>
+
+    <div class="row mobile">
+        <div class="mobile-item">Mobile</div>
+        <div class="mobile-item flex-item-1">
+            <div class="mobile-linha"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-md-8 col-sm-8 col-lg-5">
+            <label for="idTextHome" class="label-uppercase">Texto de chamada na home</label>
+            <input class="form-control form-control-sm" id="idTextHome" type="text">
+        </div>
+        <div class="form-group col-md-4 col-sm-4 col-lg-2">
+            <label for="idPerDia" class="label-uppercase">Período em dias</label>
+            <input id="idPerDia" type="number" name="quantity" min="1" max="5" class="form-control form-control-sm">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-md-12 col-sm-12 col-lg-7">
+            <div>
+                <label for="idDescricao" class="label-uppercase">Descrição</label>
+                <textarea class="form-control" id="idDescricao"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="custom-control custom-checkbox">
+            <input checked="" class="custom-control-input checkbox-success" id="checkboxSuccess" type="checkbox">
+            <label class="custom-control-label" for="checkboxSuccess">Disponível para abertura do aplicativo</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
+            <label for="idPerDia" class="label-uppercase">Ícone</label>
+            <form class="dropzone" dropzone action="#" id="my-awesome-dropzone"></form>
+        </div>
+        <div class="form-group col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
+            <label for="idPerDia" class="label-uppercase">Imagem</label>
+            <form class="dropzone" dropzone action="#" id="my-awesome-dropzone"></form>
+        </div>
+    </div>
+
+    <div class="row buttons">
+        <div class="buttom-item">
+            <button [routerLink]="'/pages/app-quer/questionario'" class="btn btn-secondary btn-rounded"
+                type="button">Cancelar</button>
+        </div>
+        <div class="buttom-item">
+            <button class="btn btn-info btn-rounded" type="button">Salvar</button>
+        </div>
     </div>
 </div>
