@@ -1,85 +1,88 @@
+<div class="titulo">
+    Lista de questionário
+</div>
+<div class="subtitulo">
+    Questionário / Lista de questionário
+</div>
+
 <div class="row">
-        <div class="col-12">
-            <div class="titulo">
-                Lista de questionário
-            </div>
-            <div class="subtitulo">
-                Questionário / Lista de questionário
-            </div>
-    
-            <div class="form-group cb-empresa">
+    <div class="col">
+
+        <div class="row">
+            <div class="form-group col-md-12 col-sm-12 col-lg-3">
                 <quer-empresa></quer-empresa>
             </div>
-    
-            <div class="flex flex-wrap">
-    
-                <div class="form-group item grow1">
-                    <label for="input-8" class="label-uppercase">Nome</label>
-                    <input class="form-control form-control-sm" id="input-8" type="text">
-                </div>
-    
-                <div class="form-group item">
-                    <label for="idEmpresa" class="label-uppercase">Categoria</label>
-                    <select class="form-control form-control-sm" id="idEmpresa">
-                        <option selected=""></option>
-                        <option>0975 - Informações Básicas</option>
-                        <option>0032 - Atualização de perfil</option>
-                    </select>
-                </div>
-    
-                <div class="item-button">
-                    <button type="button" class="btn btn-outline-info btn-rounded">Buscar</button>
-                </div>
-            </div>
-    
-            <ngx-datatable id="idListQuestionario" #table class="bootstrap" [headerHeight]="50" [limit]="10"
-                [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'" [rows]="rows">
-    
-                <ngx-datatable-column name="codSingular">
-                    <ng-template ngx-datatable-cell-template let-value="value">
-                        {{value}}
-                    </ng-template>
-                </ngx-datatable-column>
-    
-                <ngx-datatable-column name="Nome">
-                    <ng-template ngx-datatable-cell-template let-value="value">
-                        {{value}}
-                    </ng-template>
-                </ngx-datatable-column>
-    
-                <ngx-datatable-column name="Categoria">
-                    <ng-template ngx-datatable-cell-template let-value="value">
-                        {{value}}
-                    </ng-template>
-                </ngx-datatable-column>
-    
-    
-                <ngx-datatable-column name="Situacao">
-                    <ng-template ngx-datatable-cell-template let-value="value">
-                        {{value}}
-                    </ng-template>
-                </ngx-datatable-column>
-    
-    
-                <ngx-datatable-column name="CriadoEm">
-                    <ng-template ngx-datatable-cell-template let-value="value">
-                        {{value}}
-                    </ng-template>
-                </ngx-datatable-column>
-    
-    
-                <ngx-datatable-column name="AlteradoEm">
-                    <ng-template ngx-datatable-cell-template let-value="value">
-                        {{value}}
-                    </ng-template>
-                </ngx-datatable-column>
-    
-                <ngx-datatable-column name="Ações">
-                    <ng-template ngx-datatable-cell-template let-value="value">
-                        <a class="menu-item" [routerLink]="['../questionario/1']"
-                            routerLinkActive="menu-item-active">Editar</a>
-                    </ng-template>
-                </ngx-datatable-column>
-            </ngx-datatable>
         </div>
+
+        <div class="row">
+            <div class="form-group col-md-12 col-sm-12 col-lg-2">
+                <label for="input-8" class="label-uppercase">Nome</label>
+                <input class="form-control form-control-sm" id="input-8" type="text">
+            </div>
+
+            <div class="form-group col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
+                <label for="idEmpresa" class="label-uppercase">Categoria</label>
+                <select class="form-control form-control-sm" id="idEmpresa">
+                    <option selected=""></option>
+                    <option>0975 - Informações Básicas</option>
+                    <option>0032 - Atualização de perfil</option>
+                </select>
+            </div>
+
+            <div class="item-button col-6 col-lg-2 col-md-6 col-sm-6 col-lg-2">
+                <button type="button" class="btn btn-outline-info btn-rounded">Buscar</button>
+            </div>
+        </div>
+
+
+        <ngx-datatable id="idListQuestionario" #table class="bootstrap" [headerHeight]="50" [limit]="10"
+            [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'" [rows]="rows">
+
+            <ngx-datatable-column name="codSingular">
+                <ng-template ngx-datatable-cell-template let-value="value">
+                    {{value}}
+                </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column name="Nome">
+                <ng-template ngx-datatable-cell-template let-value="value">
+                    {{value}}
+                </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column name="Categoria">
+                <ng-template ngx-datatable-cell-template let-value="value">
+                    {{value}}
+                </ng-template>
+            </ngx-datatable-column>
+
+
+            <ngx-datatable-column name="Situacao">
+                <ng-template ngx-datatable-cell-template let-value="value">
+                    {{value}}
+                </ng-template>
+            </ngx-datatable-column>
+
+
+            <ngx-datatable-column name="CriadoEm">
+                <ng-template ngx-datatable-cell-template let-value="value">
+                    {{value}}
+                </ng-template>
+            </ngx-datatable-column>
+
+
+            <ngx-datatable-column name="AlteradoEm">
+                <ng-template ngx-datatable-cell-template let-value="value">
+                    {{value}}
+                </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column name="Ações">
+                <ng-template ngx-datatable-cell-template let-value="value">
+                    <a class="menu-item" [routerLink]="['../questionario/1']"
+                        routerLinkActive="menu-item-active">Editar</a>
+                </ng-template>
+            </ngx-datatable-column>
+        </ngx-datatable>
     </div>
+</div>

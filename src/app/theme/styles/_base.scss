@@ -12,21 +12,20 @@ body {
     background-color: #fff;
 }
 
-.flex {
-    display: flex;
+.card-body{
+    background: #FFFFFF;
+    margin-top: 15px;
+    padding: 15px 20px 20px 20px;
+    border-radius: 4px;    
 }
 
-.flex-wrap {
-	flex-wrap: wrap;
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
-.basis-300 {
-	flex-basis: 300px;
-}
-
-label {
-    display: inline-block;
-    margin-bottom: 0.1rem;
+.custom-control {
+    padding-left: 1.2rem;
 }
 
 .label-uppercase {
@@ -56,7 +55,8 @@ label {
     justify-content: flex-end;
 }
 
-.buttom-item{
+.buttons .buttom-item {
+    margin-bottom: 8px;
     margin-right: 10px;
 }
 
@@ -77,37 +77,6 @@ label {
     color: #fff;
     background-color: rgb(47, 163, 155);
     border-color: rgb(47, 163, 155);
-}
-.cb-empresa{
-    min-width: 180px;
-    max-width: 360px;
-}
-
-/* Os itens não se expandem para ocupar o container. */
-.grow0 {
-	flex-grow: 0;
-}
-
-/* Os itens se expandem igualmente para ocupar o container. Utilizando apenas o flex-grow, o crescimento é distribuído igualmente antes e depois do conteúdo de cada elemento. (pois por padrão o flex-basis é auto) */
-.grow1 {
-	flex-grow: 1;
-}
-
-/* Os itens se expandem duas vezes mais que aqueles com flex-grow: 1; */
-.grow2 {
-	flex-grow: 2;
-}
-
-.item-col-614 {
-    padding: 0px 20px 0 0px;
-    min-width: 100px;
-    max-width: 614px;
-}
-
-.item-col-308 {
-    padding: 0px 20px 0 0px;
-    min-width: 100px;
-    max-width: 308px;
 }
 
 .ngx-datatable.bootstrap {
